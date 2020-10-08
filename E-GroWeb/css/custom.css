@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "cream";
+    src: url("../fonts/Cream\ Cake.ttf");
+  }
+
+#logo{
+    width: 200px;
+}
+#sidebar{
+    background-color: #2A2515;
+    
+}
+#contenido{
+    background-image: url(../img/naturaleza2.jpg);
+    background-size: cover;
+    height: 50vh;
+}
+#logo-letter{
+    font-family: cream;
+    font-size: 150px;
+}
+#logo-img{
+    width: 500px;
+}
