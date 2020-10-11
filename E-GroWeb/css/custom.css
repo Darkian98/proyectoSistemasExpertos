@@ -1,24 +1,83 @@
-@font-face {
-    font-family: "cream";
-    src: url("../fonts/Cream\ Cake.ttf");
-  }
+.img-logo{
+    width: 260px;
+}
 
-#logo{
-    width: 200px;
-}
-#sidebar{
-    background-color: #2A2515;
-    
-}
-#contenido{
+#one-block{
+    height: 100vh;
     background-image: url(../img/naturaleza2.jpg);
     background-size: cover;
+}
+two-block{
     height: 50vh;
 }
-#logo-letter{
-    font-family: cream;
-    font-size: 150px;
+@media (max-width: 576px) {
+    #one-block{
+        height: 100vh;
+        background-image: url(../img/naturaleza2.jpg);
+        background-size: cover;
+        background-position-x:-180px ;
+    };
+  }
+  @media (max-width: 576px) {
+    #eslogan{
+        padding-left: 0px !important;
+        margin-top: 40px !important;
+    }
+    #logo{
+        margin-top: 3rem;
+        margin-left: 0.5rem !important;
+    }
+    #sidebarstyle{
+        position: fixed !important;
+        width: 18rem !important;
+    }
+  }
+
+#eslogan{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    padding-left: 40rem;
 }
-#logo-img{
-    width: 500px;
+.button-eslogan{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #1D1919;
+    color:white;
+    font-weight: bold;
+    border-radius: 20px;
 }
+.beneficios{
+    color: green;
+    font-size: 2rem;
+    font-weight: 500
+}
+.card-title{
+    font-weight: bold;
+}
+.btn-primary{
+    background-color: #306F10 !important;
+    border-color: #306F10 !important;
+}
+#sidebarCollapse{
+    position: fixed;
+    z-index: 1000;
+}
+#logo{
+    width: 20rem;
+    margin-left: 4rem;
+}
+#sidebarstyle{
+    position: fixed;
+    width: 18rem;
+}
+
+/*PALETA DE COLORES
+#35331A
+#306F10
+#1D1919
+#1D1919
