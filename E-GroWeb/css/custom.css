@@ -7,8 +7,11 @@
     background-image: url(../img/naturaleza2.jpg);
     background-size: cover;
 }
-two-block{
-    height: 50vh;
+#two-block{
+  
+}
+#three-block{
+  
 }
 @media (max-width: 576px) {
     #one-block{
@@ -75,6 +78,10 @@ two-block{
     position: fixed;
     width: 18rem;
 }
+.white{
+    color:white;
+}
+
 
 /*PALETA DE COLORES
 #35331A
