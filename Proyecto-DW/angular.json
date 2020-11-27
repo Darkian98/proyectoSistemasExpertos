@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Proyecto-DW"
+  "defaultProject": "Proyecto-DW",
+  "cli": {
+    "analytics": false
+  }
 }
