@@ -1,0 +1,38 @@
+<nav id="sidebar" [ngClass]="{'visible': sidebar == true, 'no-visible':sidebar != true}">
+    <div id="sidebarstyle" class="p-4 pt-5 ">
+      <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assets/naturaleza1.jpg);"></a>
+     <ul class="list-unstyled components mb-5">
+     <li class="active">
+    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Páginas Personales</a>
+    <ul class="collapse list-unstyled" id="homeSubmenu">
+    <li>
+        <a href="#">Home 1</a>
+    </li>
+    <li>
+        <a href="#">Home 2</a>
+    </li>
+    <li>
+        <a href="#">Home 3</a>
+    </li>
+    </ul>
+  </li>
+  <li>
+      <a href="#">Misión y Visión</a>
+  </li>
+  <li>
+  <a href="#">Contactos</a>
+  </li>
+</ul>
+
+<div class="footer">
+    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              UNAH &copy;<script>document.write(new Date().getFullYear());</script> 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+</div>
+
+</div>
+</nav>
+<button type="button" [ngClass]="{'near': buttonBar == true, 'far':buttonBar != true}" class="button-bars" id="sidebarCollapse" (click)="ejecutar()" class="btn btn-primary m-2">
+    <fa-icon [icon]="faBars"></fa-icon>
+    <span class="sr-only">Toggle Menu</span>
+</button>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prueba.component.css']
 })
 export class PruebaComponent implements OnInit {
-  hola:string="Juan";
+  hola = 'Juan';
 
   constructor() { }
 
