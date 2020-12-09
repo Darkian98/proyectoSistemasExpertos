@@ -2,11 +2,6 @@
     width: 260px;
 }
 
-#one-block{
-    height: 100vh;
-    background-image: url("../../assets/naturaleza2.jpg");
-    background-size: cover;
-}
 
 @media (max-width: 576px) {
     #one-block{
@@ -85,8 +80,10 @@
     background-position: center center; }
   
   #sidebar {
+    z-index: 1000;
     min-width: 300px;
     max-width: 300px;
+    min-height: 100vh;
     background: #1d1919;
     color: #fff;
     -webkit-transition: all 0.3s;

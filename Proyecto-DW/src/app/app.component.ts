@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { faPagelines } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faLeaf, faTree } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faGooglePlusG, faInstagram, faLinkedinIn, faPagelines, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCircle, faLeaf, faTree } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +15,7 @@ export class AppComponent {
   faLeaf = faLeaf;
   faPagelines = faPagelines;
   faTree = faTree;
+  faCircle = faCircle;
 /*
   ejecutar(): void{
     if (this.sidebar){
