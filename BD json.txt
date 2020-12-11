@@ -1,0 +1,46 @@
+// Empresas
+{
+    nombre: string;
+    apellido: string;
+    fecha de nacimiento: string;
+    empresa: {
+        nombreEmpresa:;
+        direccion:;
+        eslogan:;
+    }
+}
+
+// Cliente
+{
+    nombre: string;
+    apellido: string;
+    fecha de nacimiento: string;
+    correo: string;
+    producto : [];
+    tarjeta: 
+}
+
+// Plan{
+    nombrePlan: string;
+    precio: float; 
+    limitacion: {
+        segundosRetardo: int;
+        cantidadImagen: int;
+        cantidadPatron: int;
+        clienteActivos: int;
+        cantidadPagina: int;
+    }
+}
+
+//Administrador{
+    nombre: string;
+    apellido: string;
+    fecha de nacimiento: string;
+}
+
+//Plantilla{
+    tituloTema
+    descripcion
+    css
+    javascript
+}
