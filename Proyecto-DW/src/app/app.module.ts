@@ -12,6 +12,8 @@ import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
 import { LandingPageComponent } from './componentes/landing-page/landing-page.component';
+import { EmpresasModule } from './modules/empresas/empresas.module';
+import { LoginModule } from './modules/login/login.module';
 
 
 @NgModule({
@@ -28,9 +30,12 @@ import { LandingPageComponent } from './componentes/landing-page/landing-page.co
     FormsModule,
     NgbModule,
     FontAwesomeModule,
-    RouterModule
+    RouterModule,
+    EmpresasModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
-export class AppModule { }
+export class AppModule {}

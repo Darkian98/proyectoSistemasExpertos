@@ -12,12 +12,13 @@ export class SidebarComponent implements OnInit {
   buttonBar = false;
   sidebar = false;
   faBars = faBars;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  ejecutar(): void{
+  cambiarSidebar(): void{
     if (this.sidebar){
       this.sidebar = false;
       this.buttonBar = false;
@@ -27,5 +28,12 @@ export class SidebarComponent implements OnInit {
       this.buttonBar = true;
     }
   }
+
+  cerrarSidebar(): void{
+    if (this.sidebar){
+      this.sidebar = false;
+      this.buttonBar = false;
+    }
+    }
 
 }
