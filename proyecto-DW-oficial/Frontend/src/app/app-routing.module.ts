@@ -8,7 +8,7 @@ import { SignInComponent } from './modules/login/sign-in/sign-in.component'
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: '\prueba', component: EjemploComponent},
-  { path: '\login', component: SignInComponent}
+  { path: 'login', component: SignInComponent}
 
 ];
 

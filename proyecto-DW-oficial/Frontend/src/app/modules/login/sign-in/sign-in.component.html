@@ -7,29 +7,36 @@
         </svg>
         <img class="tree" src="../../../../assets/tree.png" alt="">
         <div class="left-leaf"> <fa-icon [icon]="faEnvira"></fa-icon></div>
+        <div class="right-leaf"> <fa-icon [icon]="faEnvira"></fa-icon></div>
         <div class="globe"> <fa-icon [icon]="faGlobe"></fa-icon></div>
+        <div class="shop"> <fa-icon [icon]="faShoppingCart"></fa-icon></div>
     </div>
     <div class="col-12 col-sm-6">
         <div class="form-login">
-        <form>
+        <form [formGroup]='formularioLogin'>
             <div class="text-center welcome">Bienvenido</div><hr>
             <label class="data-form">Email</label><br>
-            <input type="email" class="form-control" placeholder="Ejemplo: juan@gmail.com"><br>
+            <input  required type="email" formControlName="correo" name="correo" class="form-control" placeholder="Ejemplo: juan@gmail.com">
+            <span *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="error">
+                *Campo obligatorio
+            </span>
+            <br>
             <label class="data-form">Password</label><br>
-            <input type="password"  class="form-control" placeholder="********">
+            <input  type="password" formControlName="contrasenia"  class="form-control" placeholder="********">
+            <span *ngIf="contrasenia.invalid && (contrasenia.touched)" class="error">
+                *Campo obligatorio
+            </span>
             <br>
             <div><a href="#">¿Olvidastes tu contraseña?</a></div>
             <br>
-            <button style="width: 100%;" class="btn btn-success" type="button">Login</button>
+            <button [disabled]="!formularioLogin.valid" style="width: 100%;" (click)="iniciarSesion()" class="btn btn-success" type="button">Login</button>
             <br>
-          
             <hr>
             <span style="font-size: 15px; color:gray">  <fa-icon [icon]="faQuestionCircle"></fa-icon> ¿Nuevo en EgroWeb?</span>
             <div class="text-left"> <br>
-            <div class="btn btn-info"><a style="color:black"href="">Registrate</a></div>
+            <div (click)="existeUsuario()" class="btn btn-info"><span style="color:black" href="">Registrate</span></div>
               </div>
         </form>
     </div>
     </div>
-    
 </div>

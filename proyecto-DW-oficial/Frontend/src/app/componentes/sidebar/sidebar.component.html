@@ -1,6 +1,7 @@
 <nav id="sidebar" [ngClass]="{'visible': sidebar == true, 'no-visible':sidebar != true}">
     <div id="sidebarstyle" class="p-4 pt-5 ">
-      <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assets/naturaleza1.jpg);"></a>
+      <a *ngIf="sesion" href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assets/49.jpg);"></a>
+      <button style="width: 100%;" class="btn btn-warning">Iniciar Sesión</button>
      <ul class="list-unstyled components mb-5">
      <li class="active">
   </li>

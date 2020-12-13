@@ -39,6 +39,14 @@
     font-size: 7em;
     color: green;
 }
+.right-leaf{
+    position: absolute;
+    left: 72rem;
+    top: 1.25em;
+    font-size: 7em;
+    color: green;
+}
+
 .globe{
     position: absolute;
     left: 35rem;
@@ -47,6 +55,13 @@
     color: rgb(12, 12, 12);
 }
 
+.shop{
+    position: absolute;
+    left: 75rem;
+    top: 3.8em;
+    font-size: 6em;
+    color: rgb(12, 12, 12);
+}
 
 .text-login{
     z-index: 40 !important;
@@ -71,7 +86,6 @@
     position: absolute;
     color:rgb(8, 8, 8);
     margin-top: 6.2em;
-    border: solid 2px black;
     background-color: white;
     border-radius: 43px;
     padding: 1.5em 2em 3em 2em;
@@ -98,4 +112,10 @@
 hr{
     margin-top: 0;
     margin-bottom: 1em;
+}
+.error{
+    color: red;
+    margin-left: 14px;
+    font-size: 13px;
+    margin-bottom: 4px;
 }

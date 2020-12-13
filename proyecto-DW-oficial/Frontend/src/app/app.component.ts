@@ -11,7 +11,7 @@ export class AppComponent {
   @ViewChild('sidebar') sidebarComponent: SidebarComponent = new SidebarComponent();
 
   cerrarSidebar(): void{
-    console.log('Se selecciono CONTENT (AppComponent)');
+    // console.log('Se selecciono CONTENT (AppComponent)');
     this.sidebarComponent.cerrarSidebar();
   }
 

@@ -9,6 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   host: {class: 'wrapper d-flex align-items-stretch'},
 })
 export class SidebarComponent implements OnInit {
+  sesion!: boolean;
   buttonBar = false;
   sidebar = false;
   faBars = faBars;
@@ -16,6 +17,7 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.existeUsuario();
   }
 
   cambiarSidebar(): void{
@@ -34,6 +36,15 @@ export class SidebarComponent implements OnInit {
       this.sidebar = false;
       this.buttonBar = false;
     }
-    }
-
+}
+existeUsuario(): void{
+  localStorage.getItem('usuario');
+  if (this.sesion){
+    console.log('yep');
+    this.sesion = true;
+  }else{
+    console.log('nop');
+    this.sesion = false;
+  }
+}
 }
