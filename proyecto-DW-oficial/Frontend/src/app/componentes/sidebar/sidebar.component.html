@@ -1,17 +1,32 @@
 <nav id="sidebar" [ngClass]="{'visible': sidebar == true, 'no-visible':sidebar != true}">
     <div id="sidebarstyle" class="p-4 pt-5 ">
-      <a *ngIf="sesion" href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assets/49.jpg);"></a>
-      <button style="width: 100%;" class="btn btn-warning">Iniciar Sesión</button>
-     <ul class="list-unstyled components mb-5">
-     <li class="active">
-  </li>
-  <li>
-      <a [routerLink]="['/login']">Misión y Visión</a>
-  </li>
-  <li>
-  <a href="#">Contactos</a>
-  </li>
-</ul>
+        
+        <ng-container *ngIf="!existeUsuario(); else iniciado">
+            <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../assets/cara.png);"></a>
+            <button  [routerLink]="['/signIn']" style="width: 100%;" class="btn btn-warning">Iniciar Sesión</button><br>
+            <br><div><b>No hay usuarios activos </b></div><br>
+        </ng-container>
+
+        <ng-template #iniciado>
+            <a [routerLink]="['']" class="img logo rounded-circle mb-5" style="background-image: url(../assets/49.jpg);"></a>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+             </li>
+             <li class="signed">
+                 <a ></a>
+             </li>
+             <li class="signed">
+             <a>Contactos</a>
+             </li>
+             <li class="signed">
+               <a (click)="logout()">Salir</a>
+               </li>
+           </ul>
+        </ng-template>
+
+    
+
+
 
 <div class="footer">
     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

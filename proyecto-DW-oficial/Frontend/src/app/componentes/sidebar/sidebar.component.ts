@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +16,8 @@ export class SidebarComponent implements OnInit {
   sidebar = false;
   faBars = faBars;
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
+
 
   ngOnInit(): void {
     this.existeUsuario();
@@ -37,14 +40,14 @@ export class SidebarComponent implements OnInit {
       this.buttonBar = false;
     }
 }
-existeUsuario(): void{
-  localStorage.getItem('usuario');
-  if (this.sesion){
-    console.log('yep');
-    this.sesion = true;
-  }else{
-    console.log('nop');
-    this.sesion = false;
-  }
+existeUsuario(): boolean{
+  return this.authService.loggedIn();
 }
+
+logout(): void{
+    this.authService.logout();
+}
+
+
+
 }
