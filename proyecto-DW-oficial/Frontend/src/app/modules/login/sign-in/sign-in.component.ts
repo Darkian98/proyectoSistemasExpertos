@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { faEnvira } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faQuestionCircle, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { AuthService} from '../../../services/auth.service';
+
+
 
 
 @Component({
@@ -21,10 +25,10 @@ export class SignInComponent implements OnInit {
   faShoppingCart = faShoppingCart;
   sesion = true;
 
-  constructor() {  }
+  constructor(private authService: AuthService, private router: Router) {  }
 
   ngOnInit(): void {
-    localStorage.removeItem('usuario');
+   // localStorage.removeItem('usuario');
   }
 
   get correo(): any{
@@ -35,20 +39,14 @@ export class SignInComponent implements OnInit {
     return this.formularioLogin.get('contrasenia');
   }
   iniciarSesion(): void{
-    console.log(this.formularioLogin.value);
-    if (this.formularioLogin.valid){
-        localStorage.setItem('usuario', JSON.stringify(this.formularioLogin.value));
-    } else{
-      console.log('noo');
-    }
+    this.authService.signIn(this.formularioLogin.value)
+    .subscribe(res => {
+      localStorage.setItem('token', res.token);
+      this.router.navigate(['/ejemplo']);
+      console.log(res);
+    }, error => {
+      console.log(error);
+    });
   }
 
-  existeUsuario(): void{
-    const a = localStorage.getItem('usuario');
-    if (a){
-      console.log('Existe Usuario Activo');
-    }else{
-      console.log('Ya no quiero');
-    }
-  }
 }

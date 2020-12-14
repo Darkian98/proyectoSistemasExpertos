@@ -1,3 +1,3 @@
 use spotify;
-db.createCollection('artistas');
+db.createCollection('empresa');
 db.createCollection('usuarios');

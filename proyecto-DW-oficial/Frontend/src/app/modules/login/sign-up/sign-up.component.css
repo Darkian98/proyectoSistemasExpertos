@@ -1,0 +1,99 @@
+#background{
+    background-image: linear-gradient(135deg, #306F10, rgb(12, 12, 12));
+
+}
+#line-brown{
+    display: flex;
+    background-color: #1D1905;
+    position: fixed;
+    z-index: 30;
+    text-align: center;
+    float: right;
+}
+.text-login{
+    z-index: 40 !important;
+    font-size: 2.5em;
+    color: white;
+    position: relative;
+    font-weight: 600;
+    margin-left: 40%;
+}
+
+.intern{
+    padding-top: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: 100%;
+}
+
+
+.form-login{
+    margin-left: 22%;
+    color:rgb(8, 8, 8);
+    background-color: white;
+    border-radius: 43px;
+    padding: 1.5em 2em 3em 2em;
+    width: 50%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.welcome{
+    font-size: 2em;
+    font-weight: 600
+}
+#form-personal{
+    width: 80%;
+}
+.item{
+    margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+    .row{
+        display: block;
+    }
+    .form-login{
+        margin-top: 1em;
+        width: 90vw;
+        margin-left: 0;
+    }
+    #form-personal{
+        width: 90%;
+    }
+    
+}
+
+/***/
+
+.switch-button {
+    display: inline-block;
+}
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+.switch-button .switch-button__label {
+    background-color: #fe5e41;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fdffff;;
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px #000;
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: #00a878;
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}

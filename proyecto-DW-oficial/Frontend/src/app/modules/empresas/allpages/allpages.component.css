@@ -1,0 +1,59 @@
+
+.all{
+    background-image: url("../../../../assets/fondo.jpeg");
+}
+.blacky{
+    background-color: rgba(0, 0, 0, 0.705);
+}
+.pagina{
+    padding:2.5em;
+
+}
+img{
+max-width:100%;
+max-height:100%;
+}
+.burbuja{
+    color:rgb(8, 8, 8);
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5em 2em 2em 2em;
+    width: 100%;
+    text-align: center;
+    box-shadow: 5px 8px ;
+}
+.img-fit{
+    height: 10rem;
+    width: 100%;
+    margin-bottom: 1em ;
+
+}
+p{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#line{
+    height: 98%;
+    background-color: rgb(219, 219, 219);
+    width: 3%;
+    border-radius: 30px;
+    float: left;
+}
+.bg{
+    background-color: rgba(255, 255, 255, 0.699);
+    z-index: 1000;
+}
+.vista{
+    color:rgb(8, 8, 8);
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5em 2em 2em 2em;
+    width: 100%;
+    text-align: center;
+    box-shadow: 5px 8px ;
+
+}
+.number{
+    font-size: 40px;
+    font-weight: bold;
+}

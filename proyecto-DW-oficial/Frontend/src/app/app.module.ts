@@ -14,6 +14,12 @@ import { PruebaComponent } from './componentes/prueba/prueba.component';
 import { LandingPageComponent } from './componentes/landing-page/landing-page.component';
 import { EmpresasModule } from './modules/empresas/empresas.module';
 import { LoginModule } from './modules/login/login.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { AuthGuard } from './auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { AuthService } from './services/auth.service';
+
 
 
 @NgModule({
@@ -32,9 +38,10 @@ import { LoginModule } from './modules/login/login.module';
     FontAwesomeModule,
     RouterModule,
     EmpresasModule,
-    LoginModule
+    LoginModule,
+    NgxSpinnerModule,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 
 })

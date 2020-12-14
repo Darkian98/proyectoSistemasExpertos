@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    color:white !important;
+}
+.navbar-light .navbar-brand {
+    color: #0a6433 !important;
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: #191d1b!important;
+}
+
+.navbar-right{
+    text-align: right;
+
+}
+
+.nav-item{
+    cursor:pointer;
+}
+.nav-item:hover{
+    background-color: #323a36;
+}
+.eslogan{
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+    cursor: default;
+}

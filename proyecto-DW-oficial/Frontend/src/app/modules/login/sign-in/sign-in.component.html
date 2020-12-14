@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div id="background" class="row">
     <div id="line-brown" class="col-12 text-center"><div class="text-login text-right">Iniciar Sesión</div></div>
     <div class="col-12 col-sm-6 d-none d-sm-block d-sm-none d-md-block text-center">
@@ -34,9 +35,10 @@
             <hr>
             <span style="font-size: 15px; color:gray">  <fa-icon [icon]="faQuestionCircle"></fa-icon> ¿Nuevo en EgroWeb?</span>
             <div class="text-left"> <br>
-            <div (click)="existeUsuario()" class="btn btn-info"><span style="color:black" href="">Registrate</span></div>
+            <div [routerLink]="['/signUp']" class="btn btn-info"><span style="color:black" >Registrate</span></div>
               </div>
         </form>
     </div>
     </div>
+</div>
 </div>

@@ -1,6 +1,9 @@
 .img-logo{
   width: 260px;
 }
+.signed{
+  cursor: pointer;
+}
 
 
 @media (max-width: 576px) {

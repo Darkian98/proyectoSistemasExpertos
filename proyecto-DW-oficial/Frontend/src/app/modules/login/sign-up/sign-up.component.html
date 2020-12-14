@@ -1,0 +1,68 @@
+<div class="container-fluid">
+<div id="background" class="row">
+    <div id="line-brown" class="col-12 text-center"><div class="text-login text-right">Registro</div></div>
+    <div class="row intern">
+        <div class="col-12 col-md-12 tex">
+            <div class="form-login">
+                <div class="text-center welcome">Información Personal</div><hr>
+                <form [formGroup]='formularioRegister'>
+                    <div class="item">
+                            <label class="data-form"><b>Nombre</b></label><br>
+                            <input  formControlName="nombre" required type="text" name="nombre"  class="form-control" placeholder="Ejemplo: Juan">
+                    </div>
+
+                    <div class="item">
+                        <label class="data-form"><b>Apellido</b></label><br>
+                        <input formControlName="apellido" required type="text" name="apellido"  class="form-control" placeholder="Ejemplo: Perez">
+                    </div>
+                    <div class="item">
+                        <label class="data-form"><b>correo</b></label><br>
+                        <input  formControlName="correo" required type="text" name="correo" class="form-control" placeholder="Ejemplo: iancwsa@gmail.com">
+                    </div>
+                    <div class="item">
+                        <label class="data-form"><b>contrasenia</b></label><br>
+                        <input  formControlName="contrasenia" required type="password" name="contrasenia"  class="form-control" placeholder="Ejemplo: Perez">
+                    </div>
+                    <div class="item">
+                        <label class="data-form"><b>fecha de Nacimiento</b></label><br>
+                        <input formControlName="fechaNacimiento" required type="date" name="fechaNacimiento"  class="form-control" placeholder="Ejemplo: Perez">
+                    </div>
+            </form>
+            <button (click)="registrarCliente()" [disabled]="!formularioRegister.valid"  *ngIf="!usuarioEmpresarial" class="btn btn-success"><b> Registrar</b></button>
+            <button *ngIf="!usuarioEmpresarial" (click)="changeUsuario()" style="float: right;"class="btn btn-warning"><b>¿Cliente Empresarial?</b></button>
+            </div>
+        </div>
+        <div  *ngIf="usuarioEmpresarial" class="col-12 col-md-12">
+            <div class="form-login">
+                <div class="text-center welcome">Seleccion de Plan</div><hr>
+                <form [formGroup]='formularioRegister' id="form-personal">
+                    <div class="item">
+                            <label class="data-form"><b>Tipo de Plan</b></label><br>
+                        <select formControlName="plan" name="plan" class="form-control" id="">
+                            <option value="" [disabled]="true" selected>-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label class="data-form"><b>Precio: $</b></label><span>10</span><br>
+                        <label class="data-form"><b>Beneficios: </b></label><br>
+                        <div><b>*</b>1</div>
+                        <div><b>*</b>2</div>
+                        <div><b>*</b>3</div>
+                    </div>
+                    <div class="item">
+                        <label class="data-form"><b>Tarjeta de Crédito o Débito</b></label><br>
+                        <input [disabled]="!formularioRegister.valid" formControlName="tarjeta" required type="text" name="tarjeta"  class="form-control" placeholder="Ejemplo: ABC123">
+                    </div>
+
+                
+            </form>
+            <button (click)="registrarCliente()" [disabled]="!formularioRegister.valid" class="btn btn-success"><b>Registrar y Comprar</b></button>
+            <button (click)="changeUsuario()" style="float: right;"class="btn btn-warning"><b>¿Cliente Normal?</b></button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
